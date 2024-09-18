@@ -1,0 +1,89 @@
+body{
+    color: white;
+    background-color: black;
+}
+h1{
+    margin: auto;
+    justify-content: center;
+    display: flex;
+}
+fieldset{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    justify-content: space-between;
+    margin: auto;
+    display: flex;
+    width: 40%;
+}
+fieldset button{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: darkgreen;
+    color: white;
+    border: none;
+}
+ul{
+    width: 80%;
+    margin: auto;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    margin-top: 2rem;
+    padding-right: 1rem;
+    list-style-type: none;
+}
+.task{
+    width: 70%;
+    justify-content: center;
+    display: flex;
+    margin: 1rem auto;
+    flex-direction: column;
+    padding: 1rem;
+    border: 1px solid white;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.task-name{
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    padding-top: 1rem;
+    color: darkgreen;
+    font-size: 2em;
+}
+h5{
+    justify-content: center;
+    display: flex;
+    margin: auto;
+    padding: 1rem 0;
+}
+.task-desc{
+    justify-content: center;
+    margin: auto;
+    display: flex;
+    width: 90%;
+    margin-bottom: 1rem;
+}
+.task-buttons{
+    justify-content: space-between;
+    display: flex;
+    margin: auto;
+    width: 20%;
+}
+.edit-button{
+    background-color: red;
+    color: white;
+    height: 3vh;
+    width: auto;
+    text-decoration: none;
+}
+.delete-button{
+    background-color: darkgreen;
+    color: white;
+    height: 3vh;
+    width: auto;
+    text-decoration: none;
+}
+.edit-button:visited{
+    color: red;
+}
+.edit-button:active{
+    color: red;
+}

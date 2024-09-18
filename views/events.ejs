@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./event-styles.css">
+    <title>Events</title>
+</head>
+<body>
+    <ul>
+        <% tasks.forEach(task => { %>
+            <li>
+                <div class="task">
+                    <div class="task-details">
+                        <h3 class="task-name"><%= task.name %></h3>
+                        <h5><%= task.date %></h5>
+                        <p class="task-desc"><%= task.description %></p>
+                    </div>
+                </div>
+            </li>
+        <% }); %>
+    </ul>
+</body>
+</html>

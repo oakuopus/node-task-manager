@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./styles.css">
+    <title>Edit Task</title>
+</head>
+<body>
+    <div class="container">
+        <form action="/tasks/<%= task.id%>" class="task-form" method="POST">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" value="<%= task.name %>" required>
+
+            <label for="date">Date:</label>
+            <input type="date" id="date" name="date" value="<%= task.date %>"required>
+
+            <label for="description">Description:</label>
+            <textarea cols="40" rows="10" id="description" name="description" required><%= task.description %></textarea>
+            <button type="submit">Update Task</button>
+    </div>
+    <button type="button" class="back"><a href="/">Back to list</a></button>
+</body>
+</html>
