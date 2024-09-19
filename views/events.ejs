@@ -3,16 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="./event-styles.css">
+    <link rel="stylesheet" type="text/css" href="./styles.css">
     <title>Events</title>
 </head>
 <body>
+    <h1>Register</h1>
+    <form action="/events" method="POST">
+        <fieldset>
+            <legend>Add New Task</legend>
+            <input type="text" name="id" placeholder="Event ID" required>
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="MrSameer@aol.com">
+            <button type="submit" id="reg">Register</button>
+        </fieldset>         
+    </form>
     <ul>
         <% tasks.forEach(task => { %>
             <li>
                 <div class="task">
                     <div class="task-details">
                         <h3 class="task-name"><%= task.name %></h3>
+                        <h5><%= task.id %></h5>
                         <h5><%= task.date %></h5>
                         <p class="task-desc"><%= task.description %></p>
                     </div>

@@ -7,7 +7,7 @@
     <title>Task Manager</title>
 </head>
 <body>
-    <h1>Task Manager</h1>
+    <h1>Event Manager</h1>
     <div class="form">
         <form action="/tasks" method="POST">
             <fieldset>
@@ -26,6 +26,7 @@
                 <div class="task">
                     <div class="task-details">
                         <h3 class="task-name"><%= task.name %></h3>
+                        <h5><%= task.id %></h5>
                         <h5><%= task.date %></h5>
                         <p class="task-desc"><%= task.description %></p>
                     </div>

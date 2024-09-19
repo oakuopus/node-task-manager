@@ -3,22 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="./styles.css">
     <title>Edit Task</title>
+    <style>label{margin-top: 1rem;}</style>
 </head>
-<body>
-    <div class="container">
-        <form action="/tasks/<%= task.id%>" class="task-form" method="POST">
+<body style="background-color: black; color: white;">
+    <div class="container" style="display: flex; justify-content: center; margin: auto; width: 40%;">
+        <form action="/tasks/<%= task.id%>" class="task-form" method="POST" style="display: flex; flex-direction: column;">
             <label for="name">Name:</label>
-            <input type="text" id="name" name="name" value="<%= task.name %>" required>
+            <input type="text" id="name" name="name" value="<%= task.name %>" required style="width: 40%;">
 
             <label for="date">Date:</label>
             <input type="date" id="date" name="date" value="<%= task.date %>"required>
 
             <label for="description">Description:</label>
             <textarea cols="40" rows="10" id="description" name="description" required><%= task.description %></textarea>
-            <button type="submit">Update Task</button>
+            <button style="background-color: darkgreen; color: white; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; font-size: 1em; margin: auto; margin-top: 1rem;" type="submit">Update Task</button>
     </div>
-    <button type="button" class="back"><a href="/">Back to list</a></button>
+    <button style="justify-content: center; display: flex; margin: auto; background-color: white; border: white 1px solid; margin-top: 2rem; text-decoration: none;" type="button" class="back"><a href="/">Back to list</a></button>
 </body>
 </html>

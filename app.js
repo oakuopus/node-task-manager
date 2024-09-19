@@ -19,6 +19,9 @@ const saveTasks = (tasks) => {
     fs.writeFileSync("./data/tasks.json", JSON.stringify(tasks, null, 2))
 }
 
+const regEvent = (event) => {
+    fs.appendFileSync("./data/data.txt", JSON.stringify(event, null, 2))
+}
 //Routes
 
 //get: show all tasks
@@ -45,6 +48,15 @@ app.post("/tasks", (req, res) =>{
     saveTasks(tasks)
     res.redirect("/")
 })
+app.post("/events", (req, res) =>{
+    const reg = {
+        EventId: req.body.id,
+        name: req.body.name,
+        email: req.body.email
+    }
+    regEvent(reg)
+    res.redirect("/events")
+})
 
 // get on task
 app.get("/tasks/:id/edit", (req, res)=>{
@@ -59,7 +71,7 @@ app.post("/tasks/:id", (req, res) =>{
     const taskIndex = tasks.findIndex(task => task.id == req.params.id)
     tasks[taskIndex].description = req.body.description
     tasks[taskIndex].name = req.body.name
-    tasks[taskIndex].date = req.body.date6
+    tasks[taskIndex].date = req.body.date
     saveTasks(tasks)
     res.redirect("/")
 })

@@ -19,6 +19,12 @@ fieldset button{
     background-color: darkgreen;
     color: white;
     border: none;
+    cursor: pointer;
+    transition: 1s;
+}
+fieldset button:hover{
+    padding: 4px;
+    font-size: 1.2em;
 }
 ul{
     width: 80%;
@@ -39,6 +45,21 @@ ul{
     padding: 1rem;
     border: 1px solid white;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    transition: 1s;
+}
+.task:hover{
+    width: 80%;
+    padding: 2rem;
+    border: red 1px solid;
+    .task-desc{
+        font-size: 1.5em;
+    }
+    .task-name{
+        font-size: 2.5em;
+    }
+    h5{
+        font-size: 1.5em;
+    }
 }
 .task-name{
     display: flex;
@@ -47,12 +68,14 @@ ul{
     padding-top: 1rem;
     color: darkgreen;
     font-size: 2em;
+    transition: 1s;
 }
 h5{
     justify-content: center;
     display: flex;
     margin: auto;
     padding: 1rem 0;
+    transition: 1s;
 }
 .task-desc{
     justify-content: center;
@@ -60,6 +83,8 @@ h5{
     display: flex;
     width: 90%;
     margin-bottom: 1rem;
+    transition: 1s;
+    padding: 4px;
 }
 .task-buttons{
     justify-content: space-between;
@@ -72,7 +97,15 @@ h5{
     color: white;
     height: 3vh;
     width: auto;
+    text-decoration: none !important;
+}
+.edit-button:visited{
     text-decoration: none;
+    color: white;
+}
+.edit-button:active{
+    text-decoration: none;
+    color: white;
 }
 .delete-button{
     background-color: darkgreen;
@@ -80,10 +113,4 @@ h5{
     height: 3vh;
     width: auto;
     text-decoration: none;
-}
-.edit-button:visited{
-    color: red;
-}
-.edit-button:active{
-    color: red;
 }
