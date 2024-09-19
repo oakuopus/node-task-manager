@@ -25,6 +25,7 @@ fieldset button{
 fieldset button:hover{
     padding: 4px;
     font-size: 1.2em;
+    cursor: pointer;
 }
 ul{
     width: 80%;
@@ -61,6 +62,12 @@ ul{
         font-size: 1.5em;
     }
 }
+.task:hover .task-buttons .edit-button, 
+.task:hover .task-buttons form .delete-button {
+    font-size: 1.2em;
+    height: auto;
+}
+
 .task-name{
     display: flex;
     justify-content: center;
@@ -97,20 +104,14 @@ h5{
     color: white;
     height: 3vh;
     width: auto;
-    text-decoration: none !important;
-}
-.edit-button:visited{
-    text-decoration: none;
-    color: white;
-}
-.edit-button:active{
-    text-decoration: none;
-    color: white;
+    cursor: pointer;
+    transition: 1s;
 }
 .delete-button{
     background-color: darkgreen;
     color: white;
     height: 3vh;
     width: auto;
-    text-decoration: none;
+    cursor: pointer;
+    transition: 1s;
 }
