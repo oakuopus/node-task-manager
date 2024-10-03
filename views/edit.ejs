@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editor</title>
+</head>
+<body>
+    <fieldset>
+        <legend>Edit</legend>
+        <form action="/admin/<%= edit.id %>" class="edit-form" method="POST">
+            <input type="radio" name="vehicle" value="Car">
+            <label for="Car">Car</label><br>
+            <input type="radio" name="vehicle" value="Motorcycle">
+            <label for="Motorcycle">Motorcycle</label><br>
+
+            <label for="name">Model:</label>
+            <input type="text" id="model" name="model" value="<%= edit.model %>" required>
+
+            <label for="year">Year:</label>
+            <input type="year" id="year" name="year" value="<%= edit.year %>"required>
+
+            <button type="submit">Update Task</button>
+        </form>
+        <form action="/admin/edit/cars/<%= edit.id %>/delete" method="POST">
+            <button type="submit">Delete Car</button>
+        </form>
+        <form action="/admin/edit/motorcycles/<%= edit.id %>/delete" method="POST">
+            <button type="submit">Delete Motorcycle</button>
+        </form>
+    </fieldset>
+</body>
+</html>
