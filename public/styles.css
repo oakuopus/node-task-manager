@@ -1,0 +1,117 @@
+body{
+    color: white;
+    background-color: black;
+}
+h1{
+    margin: auto;
+    justify-content: center;
+    display: flex;
+}
+fieldset{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    justify-content: space-between;
+    margin: auto;
+    display: flex;
+    width: 40%;
+}
+fieldset button{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: darkgreen;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: 1s;
+}
+fieldset button:hover{
+    padding: 4px;
+    font-size: 1.2em;
+    cursor: pointer;
+}
+ul{
+    width: 80%;
+    margin: auto;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    margin-top: 2rem;
+    padding-right: 1rem;
+    list-style-type: none;
+}
+.task{
+    width: 70%;
+    justify-content: center;
+    display: flex;
+    margin: 1rem auto;
+    flex-direction: column;
+    padding: 1rem;
+    border: 1px solid white;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    transition: 1s;
+}
+.task:hover{
+    width: 80%;
+    padding: 2rem;
+    border: red 1px solid;
+    .task-desc{
+        font-size: 1.5em;
+    }
+    .task-name{
+        font-size: 2.5em;
+    }
+    h5{
+        font-size: 1.5em;
+    }
+}
+.task:hover .task-buttons .edit-button, 
+.task:hover .task-buttons form .delete-button {
+    font-size: 1.2em;
+    height: auto;
+}
+
+.task-name{
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    padding-top: 1rem;
+    color: darkgreen;
+    font-size: 2em;
+    transition: 1s;
+}
+h5{
+    justify-content: center;
+    display: flex;
+    margin: auto;
+    padding: 1rem 0;
+    transition: 1s;
+}
+.task-desc{
+    justify-content: center;
+    margin: auto;
+    display: flex;
+    width: 90%;
+    margin-bottom: 1rem;
+    transition: 1s;
+    padding: 4px;
+}
+.task-buttons{
+    justify-content: space-between;
+    display: flex;
+    margin: auto;
+    width: 20%;
+}
+.edit-button{
+    background-color: red;
+    color: white;
+    height: 3vh;
+    width: auto;
+    cursor: pointer;
+    transition: 1s;
+}
+.delete-button{
+    background-color: darkgreen;
+    color: white;
+    height: 3vh;
+    width: auto;
+    cursor: pointer;
+    transition: 1s;
+}
